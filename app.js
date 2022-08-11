@@ -43,6 +43,18 @@ app.get('/admin', (req, res) => {
         })
     })
 });
+app.get('/admin/feedback', (req, res) => {
+    let query = "SELECT * from user_feedbacks;";
+    let items = []
+    pool.query(query, (err, result) => {
+        if (err) throw err;
+        items = result
+        console.log(items)
+        res.render('index2', {
+            items: items
+        })
+    })
+});
 app.post('/admin', (req, res) => {
     console.log(req.body)
     res.redirect('/admin')
