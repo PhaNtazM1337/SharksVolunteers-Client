@@ -1,0 +1,29 @@
+<div class="container">
+   <h1>SharksVolunteers Admin Panel</h1>
+   <table class="table table-striped">
+		<thead>
+		  <tr>
+			<th>Teacher Name</th>
+			<th>Department/Position</th>
+			<th>Action</th>
+			<th>Status</th>
+		  </tr>
+		</thead>
+		<tbody>
+		 {{#each items}}
+		 <tr>
+			<td>{{teachername}}</td>
+			<td>{{department}}</td>
+			<td><form method="POST" action="/admin/approve/{{wx_id}}" ><button type="submit" id="submit">Approve</button></form><form method="POST" action="/admin/deny/{{wx_id}}" ><button type="submit" id="submit">Revoke</button></form></td>
+			{{#if (isCompleted isTeacher)}}
+            <td>Approved</td>
+            {{else}}    
+            <td>Awaiting approval</td>
+            {{/if}}
+		 </tr>
+         {{/each}}
+		</tbody>
+   </table>
+</div>
+
+
