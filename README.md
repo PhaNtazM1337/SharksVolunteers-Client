@@ -3,7 +3,7 @@
 A WeChat Mini Program that makes volunteering easier for both students and teachers
 
 
-#### Frontend
+#### Project
 Frontend: https://github.com/PhaNtazM1337/SharksVolunteers-Frontend <br />
 Backend: https://github.com/PhaNtazM1337/SharksVolunteers-Backend
 
